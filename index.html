@@ -20,7 +20,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: pink;
+    background-color: #ED2B33FF;
     height: 50px;
     width: 50px;
     transform: rotate(-45deg);
@@ -31,7 +31,8 @@
   }
 
   .heart:after {
-    background-color: pink;
+  
+    background-color: #ED2B33FF;
     content: "";
     border-radius: 50%;
     position: absolute;
@@ -42,7 +43,8 @@
   }
 
   .heart:before {
-    background-color: pink;
+  
+    background-color: #ED2B33FF;
     content: "";
     border-radius: 50%;
     position: absolute;
@@ -52,10 +54,31 @@
     left: 0px;
   }
 
+  .love {
+    position: absolute;
+    margin: auto;
+    top: 120px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    text-justify: center;
+    color: pink;
+    height: auto;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 2em;
+    font-weight: bolder;
+    /*transform: rotate(-45deg);*/
+    animation-name: love-beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite; 
+  }
+
 
   @keyframes backdiv {
     50% {
-      background: #ffe6f2;
+      background: #ED2B33FF;
     }
   }
 
@@ -64,12 +87,26 @@
       transform: scale(1) rotate(-45deg); 
     }
 
- 
     50% {
-      transform: scale(0.6) rotate(-45deg); 
+      transform: scale(0.6) rotate(-45deg);
+            box-shadow:
+        0 0 120px 60px #fff;  
    } 
   }
+
+
+  @keyframes love-beat {
+    0% {
+      transform: scale(2) rotateY(45deg) rotateZ(50deg); 
+    }
+
+    50% {
+      transform: scale(0.6) rotateY(0deg) rotateZ(0deg); 
+   } 
+  }
+
 
 </style>
 <div class="back"></div>
 <div class="heart"></div>
+<!-- <div class="love">Love you</div> -->
